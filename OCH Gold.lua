@@ -94,11 +94,11 @@ local function TurnOnRoute()
         Sleep(2)
         yield("/rotation auto HighHP")
         Sleep(0.5)
-		yield("/bmrai on")
+	yield("/bmrai on")
         Sleep(0.5)
         yield("/rotation auto HighHP")
         Sleep(0.5)
-		yield("/bmrai on")
+	yield("/bmrai on")
         Sleep(0.5)
         yield("/visland exec " .. VISLAND_ROUTE)
     end
@@ -108,8 +108,10 @@ local function TurnOffRoute()
     if goldFarming then
         goldFarming = false
         yield("/visland stop")
+        Sleep(2)
+        yield("/rotation off")
         Sleep(0.5)
-        yield("/rsr off")
+        yield("/bmrai off")
     end
     if IPC.vnavmesh.PathfindInProgress() or IPC.vnavmesh.IsRunning() then
         yield("/vnav stop")
