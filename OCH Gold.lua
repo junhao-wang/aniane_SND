@@ -11,8 +11,8 @@ plugin_dependencies: visland, vnavmesh, RotationSolver, SimpleTweaksPlugin
 --[[End Metadata]]
 
 --User Config
-local VISLAND_ROUTE = "Panthers"
-local WAR_GEARSET_NAME =  "Warrior"
+local VISLAND_ROUTE = "Crescent Cetus"
+local WAR_GEARSET_NAME =  "Paladin"
 local ST_PHANTOMJOB_COMMAND =  "phantomjob"
 local spendGold = true -- Set to false if you want to disable spending currency automatically
 
@@ -91,8 +91,14 @@ local function TurnOnRoute()
         yield("/" .. ST_PHANTOMJOB_COMMAND .. " cannoneer")
         Sleep(0.5)
         yield("/gearset change " .. WAR_GEARSET_NAME)
+        Sleep(2)
+        yield("/rotation auto HighHP")
         Sleep(0.5)
-        yield("/rsr auto")
+		yield("/bmrai on")
+        Sleep(0.5)
+        yield("/rotation auto HighHP")
+        Sleep(0.5)
+		yield("/bmrai on")
         Sleep(0.5)
         yield("/visland exec " .. VISLAND_ROUTE)
     end
