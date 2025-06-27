@@ -31,7 +31,7 @@ local PHANTOM_VILLAGE = 1278
 local INSTANCE_ENTRY_NPC = "Jeffroy"
 local ENTRY_NPC_POS = Vector3(-77.958374, 5, 15.396423)
 local REENTER_DELAY = 10
-local GOLD_DUMP_LIMIT = 9500
+local GOLD_DUMP_LIMIT = 9999
 local gold = Inventory.GetItemCount(45044)
 
 -- Shop Config
